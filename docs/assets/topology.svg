@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 860" role="img" aria-labelledby="title desc">
+  <title id="title">dsh-trajectory-graph topology</title>
+  <desc id="desc">Fixed agent-loop graph: ten nodes and eleven edges.</desc>
+  <defs>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.8" fill="#2a3140"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M0,0.7 L9.2,5 L0,9.3 z" fill="#5b8cff"/>
+    </marker>
+    <marker id="arrowEmph" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M0,0.7 L9.2,5 L0,9.3 z" fill="#3dcc8a"/>
+    </marker>
+    <filter id="card" x="-8%" y="-12%" width="116%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .bg { fill: #0c0e12; }
+      .canvas { fill: url(#grid); }
+      .wire { fill: none; stroke: #5b8cff; stroke-linecap: round; stroke-linejoin: round; }
+      .emph { stroke: #3dcc8a; stroke-width: 3.4; }
+      .dash { stroke-dasharray: 4 5; }
+      .tip { fill: #8b939e; font: 11px ui-sans-serif, system-ui, sans-serif; }
+      .tipEmph { fill: #3dcc8a; font: 11px ui-sans-serif, system-ui, sans-serif; }
+      .step circle { fill: #0c0e12; stroke: #6b7380; stroke-width: 1.2; }
+      .step text { fill: #c5cad3; font: 700 10px ui-sans-serif, system-ui, sans-serif; text-anchor: middle; }
+      .card { rx: 11; ry: 11; fill: #161920; stroke: #2a3140; stroke-width: 1; }
+      .reserved { fill: none; stroke: #3a4150; stroke-dasharray: 4 4; }
+      .title { fill: #e8eaed; font: 600 13px ui-sans-serif, system-ui, sans-serif; }
+      .kind { fill: #8b939e; font: 500 9px ui-sans-serif, system-ui, sans-serif; letter-spacing: 0.08em; }
+      .kindBox { fill: none; stroke: #2f3644; }
+      .src, .meta, .last { font: 11px ui-sans-serif, system-ui, sans-serif; }
+      .src { fill: #6b7380; }
+      .meta { fill: #c5cad3; }
+      .last { fill: #8b939e; }
+      .badge { fill: #9aa3b2; font: 11px ui-sans-serif, system-ui, sans-serif; text-anchor: end; }
+      .heading { fill: #e8eaed; font: 600 16px ui-sans-serif, system-ui, sans-serif; }
+      .sub { fill: #8b939e; font: 12px ui-sans-serif, system-ui, sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" width="1320" height="860"/>
+  <rect class="canvas" x="24" y="56" width="1272" height="776" rx="16"/>
+  <text class="heading" x="40" y="34">Agent loop · 10 nodes · 11 edges</text>
+  <text class="sub" x="1280" y="34" text-anchor="end">session · turn · step</text>
+  <g transform="translate(40 72)">
+    <g fill="none">
+      <path class="wire" stroke-width="2" marker-end="url(#arrow)" d="M500,104 L500,178"/>
+      <path class="wire" stroke-width="2.7" marker-end="url(#arrow)" d="M500,302 L500,348"/>
+      <path class="wire" stroke-width="2.7" marker-start="url(#arrow)" marker-end="url(#arrow)" d="M635,400 L940,401"/>
+      <path class="wire" stroke-width="2.7" marker-end="url(#arrow)" d="M500,452 L500,490"/>
+      <path class="wire" stroke-width="2.7" marker-end="url(#arrow)" d="M500,588 L500,626"/>
+      <path class="wire" stroke-width="2" marker-end="url(#arrow)" d="M635,675 L740,675"/>
+      <path class="wire dash" stroke-width="2" marker-end="url(#arrow)" d="M910,675 L940,675"/>
+      <path class="wire" stroke-width="2" marker-end="url(#arrow)" d="M365,539 L140,539 L140,452"/>
+      <path class="wire" stroke-width="2.7" marker-end="url(#arrow)" d="M365,675 L140,675 L140,452"/>
+      <path class="wire emph" marker-end="url(#arrowEmph)" d="M140,348 L140,240 L290,240"/>
+      <path class="wire dash" stroke-width="2" marker-end="url(#arrow)" d="M635,539 L940,535"/>
+    </g>
+    <text class="tip" x="518" y="148">user/message</text>
+    <text class="tip" x="518" y="330">agent/request</text>
+    <text class="tip" x="788" y="388">llm/stream</text>
+    <text class="tip" x="518" y="476">assistant/chunk*</text>
+    <text class="tip" x="518" y="612">tool/call</text>
+    <text class="tip" x="688" y="664">tools/pre-execute</text>
+    <text class="tip" x="248" y="528">assistant/message</text>
+    <text class="tip" x="210" y="662">tool/result</text>
+    <text class="tipEmph" x="158" y="228">deriveMessages() · next step</text>
+    <text class="tip" x="720" y="528">natural stop · inbox empty</text>
+    <g class="step">
+      <circle cx="500" cy="141" r="9"/><text x="500" y="145">1</text>
+      <circle cx="500" cy="325" r="9"/><text x="500" y="329">2</text>
+      <circle cx="788" cy="401" r="9"/><text x="788" y="405">3</text>
+      <circle cx="500" cy="471" r="9"/><text x="500" y="475">4</text>
+      <circle cx="500" cy="607" r="9"/><text x="500" y="611">5</text>
+      <circle cx="140" cy="564" r="9"/><text x="140" y="568">6</text>
+      <circle cx="140" cy="294" r="9"/><text x="140" y="298">7</text>
+    </g>
+    <g filter="url(#card)"><rect class="card" x="365" y="36" width="270" height="104"/></g>
+    <circle cx="380" cy="54" r="4" fill="#5b8cff"/>
+    <text class="title" x="392" y="58">Input</text>
+    <rect class="kindBox" x="436" y="46" width="48" height="14" rx="3"/>
+    <text class="kind" x="444" y="57">SESSION</text>
+    <text class="src" x="380" y="78">agent/pre-step → user/message</text>
+    <text class="meta" x="380" y="96">“Add a bilingual README”</text>
+    <text class="last" x="380" y="112">user/message · Source: User</text>
+    <g filter="url(#card)"><rect class="card" x="290" y="178" width="420" height="124"/></g>
+    <circle cx="305" cy="196" r="4" fill="#4d9fff"/>
+    <text class="title" x="317" y="200">Prompt assembly</text>
+    <rect class="kindBox" x="432" y="188" width="36" height="14" rx="3"/>
+    <text class="kind" x="440" y="199">CORE</text>
+    <text class="badge" x="696" y="200">Request #4</text>
+    <text class="src" x="305" y="220">system-prompt/assemble</text>
+    <text class="meta" x="305" y="238" fill="#4d9fff">System 1.2k</text>
+    <text class="meta" x="392" y="238" fill="#5b8cff">Tools 0.8k</text>
+    <text class="meta" x="468" y="238" fill="#e8a23a">Context 2.1k</text>
+    <text class="meta" x="560" y="238" fill="#8b939e">History 4.0k</text>
+    <text class="meta" x="650" y="238" fill="#3dcc8a">Results 0.6k</text>
+    <rect x="305" y="250" width="70" height="8" rx="2" fill="#4d9fff"/>
+    <rect x="375" y="250" width="48" height="8" rx="2" fill="#5b8cff"/>
+    <rect x="423" y="250" width="120" height="8" rx="2" fill="#e8a23a"/>
+    <rect x="543" y="250" width="230" height="8" rx="2" fill="#3a4150"/>
+    <rect x="773" y="250" width="36" height="8" rx="2" fill="#3dcc8a"/>
+    <text class="last" x="305" y="280">Changed this step: tool results</text>
+    <g filter="url(#card)"><rect class="card" x="40" y="348" width="200" height="104"/></g>
+    <circle cx="55" cy="366" r="4" fill="#e8a23a"/>
+    <text class="title" x="67" y="370">Session log</text>
+    <rect class="kindBox" x="148" y="358" width="56" height="14" rx="3"/>
+    <text class="kind" x="154" y="369">STORAGE</text>
+    <text class="src" x="55" y="390">ctx.sessions · append-only</text>
+    <text class="meta" x="55" y="408">47 SessionEvent</text>
+    <text class="last" x="55" y="424">this step</text>
+    <g filter="url(#card)"><rect class="card" x="365" y="348" width="270" height="104"/></g>
+    <circle cx="380" cy="366" r="4" fill="#7eb6ff"/>
+    <text class="title" x="392" y="370">Model request</text>
+    <rect class="kindBox" x="496" y="358" width="28" height="14" rx="3"/>
+    <text class="kind" x="502" y="369">LLM</text>
+    <text class="src" x="380" y="390">agent/request → llm/stream</text>
+    <text class="meta" x="380" y="408">TTFT 412 ms · Generation 2.1 s</text>
+    <text class="last" x="380" y="424">Input 8.2k (cached 3.1k) · output 1.4k</text>
+    <g filter="url(#card)"><rect class="card" x="940" y="342" width="250" height="118"/></g>
+    <circle cx="955" cy="360" r="4" fill="#9aa3b2"/>
+    <text class="title" x="967" y="364">DeepSeek API</text>
+    <rect class="kindBox" x="1068" y="352" width="62" height="14" rx="3"/>
+    <text class="kind" x="1074" y="363">EXTERNAL</text>
+    <text class="src" x="955" y="384">api.deepseek.com</text>
+    <text class="meta" x="955" y="404">deepseek-chat</text>
+    <text class="last" x="955" y="422">llm/stream ↔ request</text>
+    <g filter="url(#card)"><rect class="card" x="365" y="490" width="270" height="98"/></g>
+    <circle cx="380" cy="508" r="4" fill="#5b8cff"/>
+    <text class="title" x="392" y="512">Assistant Message</text>
+    <rect class="kindBox" x="522" y="500" width="48" height="14" rx="3"/>
+    <text class="kind" x="530" y="511">SESSION</text>
+    <text class="src" x="380" y="532">assistant/chunk* → assistant/message</text>
+    <text class="meta" x="380" y="550">Blocks: Think 1 · Text 1 · Tool calls 2</text>
+    <text class="last" x="380" y="568">assistant/message ×1</text>
+    <g filter="url(#card)"><rect class="card" x="940" y="486" width="250" height="98"/></g>
+    <circle cx="955" cy="504" r="4" fill="#4d9fff"/>
+    <text class="title" x="967" y="508">Turn end</text>
+    <rect class="kindBox" x="1032" y="496" width="36" height="14" rx="3"/>
+    <text class="kind" x="1040" y="507">CORE</text>
+    <text class="src" x="955" y="528">agent/turn-stopping → turn/end</text>
+    <text class="meta" x="955" y="546">Not fired · turn running</text>
+    <text class="last" x="955" y="562">inbox still has tool calls</text>
+    <g filter="url(#card)"><rect class="card" x="365" y="626" width="270" height="98"/></g>
+    <circle cx="380" cy="644" r="4" fill="#3dcc8a"/>
+    <text class="title" x="392" y="648">Tool Call</text>
+    <rect class="kindBox" x="462" y="636" width="42" height="14" rx="3"/>
+    <text class="kind" x="470" y="647">TOOLS</text>
+    <text class="badge" x="620" y="648">×2</text>
+    <text class="src" x="380" y="668">tool/call → execute → tool/result</text>
+    <text class="meta" x="380" y="686">grep {"pattern": "compactons"...}</text>
+    <text class="last" x="380" y="702">2 this step · 1.2 s</text>
+    <rect class="card reserved" x="740" y="626" width="170" height="98"/>
+    <circle cx="755" cy="644" r="4" fill="#6b7380"/>
+    <text class="title" x="767" y="648" fill="#8b939e">Sandbox</text>
+    <rect class="kindBox" x="830" y="636" width="62" height="14" rx="3"/>
+    <text class="kind" x="838" y="647">SECURITY</text>
+    <text class="src" x="755" y="668">ctx.sandbox</text>
+    <text class="last" x="755" y="692">reserved · dimmed</text>
+    <g filter="url(#card)"><rect class="card" x="940" y="626" width="250" height="98"/></g>
+    <circle cx="955" cy="644" r="4" fill="#9aa3b2"/>
+    <text class="title" x="967" y="648">Workspace</text>
+    <rect class="kindBox" x="1048" y="636" width="62" height="14" rx="3"/>
+    <text class="kind" x="1054" y="647">EXTERNAL</text>
+    <text class="src" x="955" y="668">ctx.fs · ctx.shell</text>
+    <text class="meta" x="955" y="686">bash · read · grep</text>
+    <text class="last" x="955" y="702">tools that touched the workspace</text>
+  </g>
+</svg>

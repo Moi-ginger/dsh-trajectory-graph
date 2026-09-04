@@ -14,7 +14,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-username>/dsh-trajectory-graph.git"
+    "url": "git+https://github.com/Moi-ginger/dsh-trajectory-graph.git"
+  },
+  "homepage": "https://github.com/Moi-ginger/dsh-trajectory-graph#readme",
+  "bugs": {
+    "url": "https://github.com/Moi-ginger/dsh-trajectory-graph/issues"
   },
   "type": "module",
   "main": "lib/index.js",
@@ -31,7 +35,8 @@
     "lib/index.js",
     "lib/client.js",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "README.zh-CN.md"
   ],
   "dsh": {
     "bundle": {
