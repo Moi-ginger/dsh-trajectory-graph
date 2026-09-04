@@ -1,0 +1,10 @@
+# dsh-trajectory-graph bundle patch.
+#
+# One row anchors both halves of the plugin. The node half is an empty loader
+# entry (the graph is a browser-only surface); the package's `dsh.client`
+# declaration adds the browser half to the web roster, served at
+# /plugins/dsh-trajectory-graph/client.js.
+
+- insert:
+    - id: trajectory-graph
+      name: 'dsh-trajectory-graph'
